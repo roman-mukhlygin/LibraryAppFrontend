@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +40,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.add-button {
+  margin: auto;
 }
