@@ -27,7 +27,6 @@ function AddBook() {
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-        console.log('add');
         bookService.addBook({id: id, name: name, year: year, genre: genre, author: author});
     }
 
@@ -51,6 +50,7 @@ function AddBook() {
       <Form.Group className="mb-3" controlId="BookAuthor">
         <Form.Label>Author</Form.Label>
         <Form.Select value={author} onChange={(event) => {setAuthor(event.target.value)}}>
+          <option>Выберите автора</option>
           {authors.map((item:IAuthor) => <option value={item.name}>{item.name}</option>)}
         </Form.Select>
       </Form.Group>
@@ -58,6 +58,7 @@ function AddBook() {
       <Form.Group className="mb-3" controlId="BookGenre">
         <Form.Label>Genre</Form.Label>
         <Form.Select value={genre} onChange={(event) => {setGenre(event.target.value)}}>
+          <option>Выберите жанр</option>
           {genres.map((item:IGenre) => <option value={item.name}>{item.name}</option>)}
         </Form.Select>
       </Form.Group>
